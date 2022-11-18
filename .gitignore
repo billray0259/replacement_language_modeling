@@ -1,6 +1,9 @@
 /Tweets.csv
-/__pycache__
-/archive
-/docs/idea.aux
-/docs/idea.log
+__pycache__/
+/docs/*.aux
+/docs/*.fdb_latexmk
+/docs/*.fls
+/docs/*.synctex.gz
+/docs/*.log
 /env
+.ipynb_checkpoints/

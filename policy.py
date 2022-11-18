@@ -57,17 +57,15 @@ def iter_actions(initial_sequence, target_sequence):
             yield insert(len(initial_sequence), token)
 
 
-def find_actions(initial_sequence, target_sequence):
+def find_optimal_actions(initial_sequence, target_sequence):
     memory = {}
     initial_distance = levenshtein_distance(initial_sequence, target_sequence, memory)
-    actions = []
     action_tups = []
 
     for action, action_tup in iter_actions(initial_sequence, target_sequence):
         new_sequence = action(initial_sequence.copy())
         new_distance = levenshtein_distance(new_sequence, target_sequence, memory)
         if new_distance < initial_distance:
-            actions.append(action)
             action_tups.append(action_tup)
 
     return action_tups
