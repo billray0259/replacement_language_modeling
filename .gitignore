@@ -5,5 +5,6 @@ __pycache__/
 /docs/*.fls
 /docs/*.synctex.gz
 /docs/*.log
+/archive
 /env
 .ipynb_checkpoints/
